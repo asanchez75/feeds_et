@@ -4,9 +4,9 @@
  * @file
  * This file is a fork of the default mappers for fields in Feeds module.
  * 
- * Problem occured when Feeds module called called the function _field_feeds_set_target()
+ * Problem occured when Feeds module called the function _field_feeds_set_target()
  *   and hardcoded the 'und' language for each field. Thus we ought to fork these functions
- *   and alter the callbacks for targets to ours as below. 
+ *   and alter the callbacks for targets to become as below. 
  */
 
 /**
