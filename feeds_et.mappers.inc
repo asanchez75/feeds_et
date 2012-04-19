@@ -98,10 +98,11 @@ function _feeds_et_field_feeds_set_target($source, $entity, $target, $value, $in
   /**
    * @todo: make default node language from settings form.
    */
-  $default_language = 'en';
-  
+  global $language;
+  $default_language = isset($language->language) ? $language->language : 'en';
+
   // Assign default language if it language was undefined
-  if ($entity->language == LANGUAGE_NONE) {
+  if (!isset($entity->language) || $entity->language == LANGUAGE_NONE) {
     $entity->language = $default_language;
   }
   // Or set the default language to the original node language
