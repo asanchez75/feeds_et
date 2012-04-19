@@ -34,7 +34,7 @@ function _feeds_et_field_feeds_set_target_numeric($source, $entity, $target, $va
  * Callback for mapping text fields.
  */
 function _feeds_et_field_feeds_set_target_text($source, $entity, $target, $value) {
-  if (!is_array($value)) {
+  if (!is_array($value) && $value !== '') {
     $value = array($value);
   }
   // Process the target name and language
